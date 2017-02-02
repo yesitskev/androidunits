@@ -1,16 +1,26 @@
 Android Units
 ==========
 
-A utility class for converting between different Android display units
+A utility class for converting between different Android display units without requiring an
+application context. This uses the system global shared `Resources` object and is not configured for
+the current screen (can not use dimension units, does not change based on orientation, etc).
+
+In future iterations of this utility I would like to accommodate to above changes.
 
 
 
 Example Usage
 -------------
 
-How can I get the pixels for the display pixel (dp) measurement I have?
+Lets say you want to set the text size while drawing a custom view:
 ```java
-float topPaddingOrSomething = AndroidUnits.DENSITY_PIXELS.toPixels(8);
+paint.setTextSize(AndroidUnits.SCALED_PIXELS.toPixels(8));
+```
+
+Or you want to draw a rectangle with rounded corners:
+```java
+float radius = AndroidUnits.DENSITY_PIXELS.toPixels(12);
+canvas.drawRoundRect(rect, radius, radius, paint);
 ```
 
 
@@ -18,18 +28,37 @@ Download
 --------
 
 Add via Gradle:
+
+
 ```groovy
-compile 'com.github.kevelbreh:androidunits:0.1.0'
-```
-or Maven:
-```xml
-<dependency>
-  <groupId>com.github.kevelbre</groupId>
-  <artifactId>androidunits</artifactId>
-  <version>0.1.0</version>
-</dependency>
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+dependencies {
+  compile 'com.github.kevelbreh:androidunits:0.1.0'
+}
 ```
 
+Or Maven:
+
+```xml
+<repositories>
+  <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.kevelbreh</groupId>
+    <artifactId>androidunits</artifactId>
+    <version>0.1.0</version>
+</dependency>
+
+```
 
 License
 -------

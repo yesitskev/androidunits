@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentedTest {
+public class ConversationsInstrumentedTest {
 
   @Test public void conversions() throws Exception {
     DisplayMetrics metrics = Resources.getSystem().getDisplayMetrics();
