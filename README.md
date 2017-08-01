@@ -14,12 +14,12 @@ Example Usage
 
 Lets say you want to set the text size while drawing a custom view:
 ```java
-paint.setTextSize(AndroidUnits.SCALED_PIXELS.toPixels(8));
+paint.setTextSize(AndroidUnit.SCALED_PIXELS.toPixels(8));
 ```
 
 Or you want to draw a rectangle with rounded corners:
 ```java
-float radius = AndroidUnits.DENSITY_PIXELS.toPixels(12);
+float radius = AndroidUnit.DENSITY_PIXELS.toPixels(12);
 canvas.drawRoundRect(rect, radius, radius, paint);
 ```
 
