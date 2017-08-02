@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(AndroidJUnit4.class)
-public class ConversationsInstrumentedTest {
+public class ConversionInstrumentedTest {
 
-  @Test public void conversions() throws Exception {
+  @Test public void test_Conversions() throws Exception {
     DisplayMetrics metrics = Resources.getSystem().getDisplayMetrics();
 
     for (float s = 0; s < 999; s++) {
