@@ -38,7 +38,7 @@ allprojects {
   }
 }
 dependencies {
-  compile 'com.github.kevelbreh:androidunits:0.1.0'
+  compile 'com.github.kevelbreh:androidunits:0.1.1'
 }
 ```
 
@@ -55,7 +55,7 @@ Or Maven:
 <dependency>
     <groupId>com.github.kevelbreh</groupId>
     <artifactId>androidunits</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 
 ```
